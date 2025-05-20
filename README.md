@@ -1,11 +1,11 @@
 
-# 🛠️ Projeto Fullstack - Sistema de Login e Loja
+#  Projeto Fullstack - Sistema de Login e Loja
 
 Este projeto é um sistema completo de login e autenticação, dividido entre frontend (React + Vite) e backend (Node.js + Express) com banco de dados PostgreSQL. Ele é voltado para fins acadêmicos e demonstra boas práticas de desenvolvimento moderno com foco em segurança, arquitetura em camadas e integração entre serviços.
 
 ---
 
-## 📚 Objetivo do Projeto
+##  Objetivo do Projeto
 
 O objetivo é construir um sistema de loja completo do zero, iniciando com uma tela de login funcional. Cada etapa do projeto representa um módulo educacional, ensinando conceitos como:
 
@@ -18,7 +18,7 @@ O objetivo é construir um sistema de loja completo do zero, iniciando com uma t
 
 ---
 
-## 📦 login-app (Frontend)
+##  login-app (Frontend)
 
 ### Tecnologias:
 - **React**: Biblioteca para construção de interfaces reativas
@@ -47,7 +47,7 @@ login-app/
 
 ---
 
-## 🔐 login-api (Backend)
+##  login-api (Backend)
 
 ### Tecnologias:
 - **Node.js**: Plataforma JavaScript para backend
@@ -97,7 +97,7 @@ login-api/
 
 ---
 
-## 🗄️ Banco de Dados
+##  Banco de Dados
 
 Banco utilizado: **PostgreSQL**
 
@@ -115,7 +115,7 @@ CREATE TABLE usuarios (
 
 ---
 
-## 🚀 Como executar o projeto localmente
+##  Como executar o projeto localmente
 
 ### Pré-requisitos:
 - Node.js instalado (v18 ou superior)
@@ -144,7 +144,7 @@ http://localhost:5173
 
 ---
 
-## 🧪 Testando
+##  Testando
 
 1. Insira um usuário diretamente no banco com senha criptografada:
 ```js
@@ -161,7 +161,7 @@ INSERT INTO usuarios (email, senha) VALUES ('teste@email.com', 'HASH_AQUI');
 
 ---
 
-## 🧱 Em construção (próximos passos):
+##  Em construção (próximos passos):
 
 - Tela de cadastro
 - Rota POST `/register`
@@ -171,14 +171,14 @@ INSERT INTO usuarios (email, senha) VALUES ('teste@email.com', 'HASH_AQUI');
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 **Ryan Fonseca Rodrigues**  
 Desenvolvedor Fullstack — Projeto acadêmico
 
 ---
 
-## 📩 Contato
+##  Contato
 Caso queira contribuir ou tirar dúvidas:
 **Email**: ryanfonsecarod@gmail.com  
 **GitHub**: https://github.com/ryanrodrigues13
