@@ -1,180 +1,79 @@
+PROJETO INTEGRADOR – FAPAM
 
-#  Projeto Fullstack - Sistema de Login e Loja
+TÍTULO DO PROJETO: Sistema de Login e Loja Virtual
 
-Este projeto é um sistema completo de login e autenticação, dividido entre frontend (React + Vite) e backend (Node.js + Express) com banco de dados PostgreSQL. Ele é voltado para fins acadêmicos e demonstra boas práticas de desenvolvimento moderno com foco em segurança, arquitetura em camadas e integração entre serviços.
+TÍTULO TRADUZIDO PARA O INGLÊS: Login and Online Store System
 
----
+INTEGRANTES
+Ryan Fonseca Rodrigues, RA: 15439
+Mateus da Silva Souza, RA:  15465
+Kayo Heytor Souza Vieira, RA:  11390
+Ronaldo Lucas, RA:  15466
+Gabriel Garcia, RA:  13314
 
-##  Objetivo do Projeto
+RESUMO
 
-O objetivo é construir um sistema de loja completo do zero, iniciando com uma tela de login funcional. Cada etapa do projeto representa um módulo educacional, ensinando conceitos como:
+O presente projeto propõe o desenvolvimento de um sistema de login e gerenciamento de loja virtual com backend em Node.js/Express, frontend em React/Vite e banco de dados PostgreSQL. Como parte do Projeto Integrador da FAPAM, a solução foi concebida para integrar os conhecimentos teóricos do curso com uma aplicação prática real, alinhada às necessidades de digitalização de pequenas empresas. O projeto abrange autenticação segura de usuários via JWT, criptografia de senhas, organização modular do código e interfaces responsivas. Tem como impacto social a democratização do acesso a soluções tecnológicas, fomentando a inclusão digital de microempreendedores. A aplicabilidade do sistema vai desde controle de acesso a usuários até o gerenciamento de produtos e pedidos futuros. O trabalho visa ampliar a compreensão sobre desenvolvimento fullstack, com práticas de mercado, uso de GitHub e padrões de projeto escaláveis.
 
-- Componentização com React
-- Comunicação frontend-backend via API REST
-- Autenticação com JWT
-- Hash de senha com Bcrypt
-- Integração com banco relacional (PostgreSQL)
-- Separação de responsabilidades no backend
+PALAVRAS-CHAVE: Sistema de Login; Loja Virtual; Projeto Fullstack; JWT; PostgreSQL.
 
----
+ABSTRACT
 
-##  login-app (Frontend)
+This project proposes the development of a login and online store system with backend using Node.js/Express, frontend in React/Vite, and PostgreSQL database. As part of FAPAM's Integrated Project, the solution was designed to integrate theoretical knowledge from the course with real-world practical application, aligned with the digitalization needs of small businesses. The project covers secure user authentication with JWT, password encryption, modular code organization, and responsive interfaces. Its social impact lies in democratizing access to technological solutions, fostering digital inclusion of micro-entrepreneurs. The system's applicability ranges from user access control to future product and order management. The project aims to expand understanding of fullstack development, market practices, GitHub usage, and scalable project design patterns.
 
-### Tecnologias:
-- **React**: Biblioteca para construção de interfaces reativas
-- **Vite**: Ferramenta de build ultrarrápida e moderna
-- **React Icons**: Biblioteca de ícones vetoriais
+KEYWORDS: Login System; Online Store; Fullstack Project; JWT; PostgreSQL.
 
-### Funcionalidades:
-- Tela de login com inputs para e-mail e senha
-- Integração com API `/login` usando `fetch`
-- Exibição de mensagens coloridas:
-  - Azul para sucesso (`Login realizado com sucesso`)
-  - Rosa para erro (`Login inválido`, `Erro ao conectar`)
-- Armazenamento de token JWT em `localStorage`
+INTRODUÇÃO
 
-### Estrutura:
-```
-login-app/
-├── public/                     # Arquivos públicos
-├── src/
-│   ├── App.jsx                 # Componente principal com tela de login
-│   ├── App.css                 # Estilo da tela com feedback visual
-│   └── main.jsx                # Entrada do app React
-├── index.html                  # Estrutura base HTML
-└── package.json                # Dependências e scripts
-```
+Com a crescente demanda por soluções digitais que promovam a eficiência na gestão de negócios, torna-se essencial a criação de sistemas web que facilitem o acesso a serviços e recursos de forma segura e escalável. O presente projeto tem como foco inicial o desenvolvimento de uma tela de login funcional, ponto de partida para um sistema de loja virtual mais completo. A escolha por tecnologias modernas como React, Vite e Node.js permite não apenas uma boa experiência de usuário, mas também um backend robusto e preparado para evoluir. Este documento detalha cada etapa do processo de construção, desde a concepção até as fases futuras planejadas.
 
----
+OBJETIVO
 
-##  login-api (Backend)
+O objetivo principal é desenvolver uma aplicação fullstack funcional composta por um sistema de login seguro e uma base preparada para a expansão da plataforma de loja virtual. O projeto busca aplicar conhecimentos de autenticação JWT, criptografia de senha, integração com banco de dados relacional e desenvolvimento de interfaces com React. Além disso, pretende-se garantir manutenção simples, organização modular e versátil para futuras implementações como cadastro de usuários, listagem de produtos e gestão de pedidos.
 
-### Tecnologias:
-- **Node.js**: Plataforma JavaScript para backend
-- **Express**: Framework para APIs REST
-- **PostgreSQL**: Banco de dados relacional
-- **Bcrypt**: Para hash seguro de senha
-- **jsonwebtoken (JWT)**: Para geração de tokens de autenticação
+JUSTIFICATIVA
 
-### Endpoints existentes:
+A escolha por esse projeto se justifica pela necessidade recorrente de sistemas de login confiáveis e integrados à realidade de micro e pequenos empreendimentos, especialmente aqueles que desejam migrar para o ambiente digital. Além disso, trata-se de uma oportunidade única de consolidar, de forma prática, os conhecimentos adquiridos em sala de aula sobre desenvolvimento web, banco de dados, segurança da informação e controle de versão.
 
-#### `POST /login`
-- Verifica se o e-mail existe
-- Compara senha com hash armazenado usando `bcrypt.compare`
-- Retorna mensagem + token JWT (válido por 2h)
+METODOLOGIA
 
-#### Exemplo de Requisição:
-```json
-{
-  "email": "usuario@email.com",
-  "senha": "123456"
-}
-```
+A metodologia aplicada baseia-se em etapas de desenvolvimento incremental e iterativo, organizadas em sprints. Inicialmente, foi definida a arquitetura do projeto e as tecnologias utilizadas. A primeira sprint contemplou a criação da interface de login com React e a configuração do backend com Express. Em seguida, foi implementada a autenticação de usuários, comunicação com o banco PostgreSQL e feedback visual. Todo o projeto foi versionado no GitHub, com uso de boas práticas como separação de responsabilidades, uso de variáveis de ambiente e modularização de componentes.
 
-#### Exemplo de Resposta:
-```json
-{
-  "mensagem": "Login realizado com sucesso",
-  "token": "JWT_TOKEN_AQUI"
-}
-```
+DESENVOLVIMENTO
 
-### Estrutura:
-```
-login-api/
-├── config/
-│   └── db.js                  # Conexão com banco PostgreSQL
-├── controllers/
-│   └── authController.js      # Lógica do login (validação + JWT)
-├── routes/
-│   └── authRoutes.js          # Rota POST /login
-├── middleware/                # (futuro) validação de token JWT
-├── models/                    # (futuro) schema de usuário
-├── server.js                  # Início do servidor Express
-├── .env                       # Variáveis de ambiente
-└── package.json               # Dependências e scripts
-```
+O desenvolvimento iniciou-se com a criação do frontend utilizando Vite para ganho de performance e React para composição dos componentes. A interface foi projetada com foco em responsividade e usabilidade. No backend, a API REST foi estruturada com Express, incluindo middleware de validação, uso de JWT para autenticação e integração com o banco PostgreSQL. A senha dos usuários é armazenada de forma segura utilizando bcrypt. A comunicação entre frontend e backend é feita via fetch, com tratamento de respostas no frontend para exibir mensagens em cores distintas conforme o resultado.
 
----
+FUNDAMENTAÇÃO TEÓRICA
 
-##  Banco de Dados
+A fundamentação teórica deste projeto baseia-se em três pilares: desenvolvimento web fullstack, segurança da informação e arquitetura de sistemas. React é utilizado por sua capacidade de criação de interfaces reativas, enquanto Node.js permite desenvolver servidores eficientes com JavaScript. A biblioteca JWT (JSON Web Token) foi escolhida para autenticação segura, por ser uma solução leve e baseada em padrões web. O uso de PostgreSQL como banco de dados garante integridade e escalabilidade das informações. Autores como Pressman (Engenharia de Software) e Sommerville embasam os conceitos de modularização, boas práticas e manutenção evolutiva de software.
 
-Banco utilizado: **PostgreSQL**
+SOLUÇÃO PROPOSTA
 
-### Estrutura da tabela `usuarios`:
+A solução proposta é um sistema web com autenticação segura, estruturado em camadas e preparado para expansão. O frontend possibilita login e apresenta feedback visual para o usuário. O backend autentica, valida e responde através de tokens. A arquitetura modular facilita manutenção, adição de novas funcionalidades e integrações com outras APIs. É uma base ideal para a futura loja digital.
 
-```sql
-CREATE TABLE usuarios (
-  id SERIAL PRIMARY KEY,
-  email VARCHAR(255) UNIQUE NOT NULL,
-  senha VARCHAR(255) NOT NULL
-);
-```
+APLICABILIDADE
 
-> A senha é armazenada com hash (`bcrypt.hash`), não em texto puro.
+O sistema pode ser adotado por pequenos comércios que desejam controlar o acesso de usuários, oferecer um ambiente digital seguro e futuramente expandir para funcionalidades como catálogo de produtos, pedidos online e gestão financeira. A arquitetura escalável e o uso de tecnologias consolidadas facilitam a implementação em diversos contextos.
 
----
+IMPACTOS ESPERADOS
 
-##  Como executar o projeto localmente
+O impacto social esperado é a inclusão digital de pequenos empreendedores, que passarão a ter acesso a uma ferramenta moderna, segura e gratuita para gestão de seus negócios. Também se espera a valorização da formação acadêmica ao aplicar conhecimentos em um projeto funcional e com potencial real de uso no mercado.
 
-### Pré-requisitos:
-- Node.js instalado (v18 ou superior)
-- PostgreSQL instalado e rodando
-- Criação manual da tabela `usuarios`
-- Configuração do arquivo `.env` no backend
+CONCLUSÃO
 
-### 1. Rodar o backend:
-```bash
-cd login-api
-npm install
-npm start
-```
+Com este projeto, foi possível aplicar na prática os conhecimentos teóricos adquiridos no curso, validando conceitos como autenticação segura, estrutura modular, comunicação cliente-servidor e integração com banco de dados. A entrega do sistema de login funcional representa a primeira etapa de uma loja virtual completa, e abre caminho para as próximas fases do Projeto Integrador.
 
-### 2. Rodar o frontend:
-```bash
-cd login-app
-npm install
-npm run dev
-```
+REFERÊNCIAS
 
-### 3. Acessar no navegador:
-```
-http://localhost:5173
-```
+PRESSMAN, R. S. Engenharia de Software. 7. ed. São Paulo: McGraw Hill, 2006.
+SOMMERVILLE, I. Engenharia de Software. 9. ed. São Paulo: Pearson Addison Wesley, 2011.
+FERREIRA, A. G. Desenvolvimento Web com Node.js. Novatec, 2019.
+ReactJS. Disponível em: https://react.dev/
+ViteJS. Disponível em: https://vitejs.dev/
+PostgreSQL. Disponível em: https://www.postgresql.org/
+ExpressJS. Disponível em: https://expressjs.com/
+JWT.io. Disponível em: https://jwt.io/
 
----
-
-##  Testando
-
-1. Insira um usuário diretamente no banco com senha criptografada:
-```js
-const bcrypt = require('bcrypt')
-bcrypt.hash('123456', 10).then(console.log)
-```
-
-2. Insira o hash no banco:
-```sql
-INSERT INTO usuarios (email, senha) VALUES ('teste@email.com', 'HASH_AQUI');
-```
-
-3. Faça login no frontend com esse e-mail e senha: a mensagem azul será exibida se for válido, rosa se for inválido.
-
----
-
-##  Em construção (próximos passos):
-
-- Tela de cadastro
-- Rota POST `/register`
-- Autenticação de rotas protegidas
-- Tela de dashboard com produtos
-- Carrinho de compras
-
----
-
-##  Autor
-
-**Ryan Fonseca Rodrigues**  
-Desenvolvedor Fullstack — Projeto acadêmico
 
 ---
 
