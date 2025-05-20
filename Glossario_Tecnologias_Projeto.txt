@@ -1,0 +1,60 @@
+
+GLOSSÁRIO E DESCRIÇÕES DO PROJETO FULLSTACK
+
+Este documento tem como objetivo explicar, de forma clara e acessível, os principais termos, tecnologias e ferramentas utilizados no projeto "Sistema de Login e Loja Virtual".
+
+------------------------------------------------------------
+
+BACKEND
+É a parte do sistema que roda no servidor. É responsável pela lógica da aplicação, regras de negócio, acesso ao banco de dados e segurança. O usuário não interage diretamente com o backend.
+
+Ferramentas utilizadas:
+- Node.js: Ambiente de execução de JavaScript no servidor.
+- Express.js: Framework web minimalista para Node.js, facilita a criação de APIs e rotas.
+- PostgreSQL: Banco de dados relacional, utilizado para armazenar as informações dos usuários e outros dados do sistema.
+- JWT (JSON Web Token): Forma segura de autenticar usuários por meio de tokens únicos.
+- Bcrypt: Biblioteca usada para criptografar senhas antes de armazená-las no banco de dados.
+
+------------------------------------------------------------
+
+FRONTEND
+É a interface gráfica com a qual o usuário interage. Tudo o que você vê na tela (botões, formulários, layout) faz parte do frontend.
+
+Ferramentas utilizadas:
+- React: Biblioteca JavaScript para criação de interfaces de usuário modernas e reativas.
+- Vite: Ferramenta moderna de build e desenvolvimento que substitui o Webpack. É rápida e otimizada para trabalhar com React.
+- HTML/CSS: Linguagens usadas para estruturar e estilizar a página.
+- Fetch API: Recurso do JavaScript que permite fazer requisições HTTP entre o frontend e o backend.
+
+------------------------------------------------------------
+
+AUTENTICAÇÃO
+Processo de validar se o usuário é quem ele diz ser. Neste projeto, usamos:
+- Login com e-mail e senha
+- Validação no backend
+- Token JWT armazenado no navegador para permitir acesso autenticado
+
+------------------------------------------------------------
+
+OUTROS TERMOS
+
+- API REST: Interface de comunicação entre sistemas baseada em protocolos HTTP. Permite que o frontend e o backend se comuniquem de forma padronizada.
+- Token: Chave gerada após o login, usada para autenticar o usuário em outras rotas do sistema.
+- Fullstack: Profissional ou projeto que engloba tanto o frontend quanto o backend.
+- Responsividade: Capacidade do sistema de se adaptar a diferentes tamanhos de tela (celular, tablet, desktop).
+- GitHub: Plataforma para hospedagem e controle de versão de código-fonte.
+- .env: Arquivo que armazena variáveis de ambiente, como senhas e portas de conexão.
+
+------------------------------------------------------------
+
+PARA QUE SERVE CADA FERRAMENTA:
+
+- Node.js → Executa código JavaScript fora do navegador
+- Express → Cria a API e define rotas do backend
+- PostgreSQL → Armazena dados de forma organizada e relacional
+- React → Cria telas e componentes interativos no navegador
+- Vite → Roda o React com performance otimizada
+- JWT → Garante que apenas usuários logados acessem áreas protegidas
+- Bcrypt → Protege as senhas de forma criptografada
+- GitHub → Guarda e compartilha o código do projeto de forma segura
+
