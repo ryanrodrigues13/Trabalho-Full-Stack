@@ -3,7 +3,12 @@ TÍTULO DO PROJETO: Sistema de Login e Loja Virtual
 
 TÍTULO TRADUZIDO PARA O INGLÊS: Login and Online Store System
 
-Autor: Ryan Fonseca Rodrigues
+INTEGRANTES
+Ryan Fonseca Rodrigues, RA: 15439
+Mateus da Silva Souza, RA:  15465
+Kayo Heytor Souza Vieira, RA:  11390
+Ronaldo Lucas, RA:  15466
+Gabriel Garcia, RA:  13314
 
 RESUMO
 
